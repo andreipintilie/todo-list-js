@@ -40,7 +40,7 @@ And then stored in the local storage, like so:
 localStorage.setItem('todos', JSON.stringify(todos))
 ```
 
-Because I used `JSON.stringify(todos)`, the output will look like an object, but it will be a string actually.
+Because I used `JSON.stringify(todos)`, the output will look like an object, but it's going to be a string actually.
 
 That's why we have to parse it to be interpreted as an object again:
 
