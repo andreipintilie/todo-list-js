@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="shortcut icon" href="./img/note.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/main.min.css">
+        <title>To-Do List App – Javascript</title>
+    </head>
+    <body>
+        <div id="wrapper" class="container">
+            <div class="app__header">
+                <h1 class="app__title">todos</h1>
+            </div>
+            <div class="app__body">
+                
+                <div id="app__input_container">
+                    <form id="form">
+                        <input type="text" placeholder="Add a task..." id="app__add_task" spellcheck="false" autocomplete="off" autofocus>
+                    </form>
+                    <div class="fas fa-plus"></div>
+                </div>
+            </div>
+        </div>
+        <div id="app__tasks" class="container-fluid">
+            <div class="container">
+                <ul id="app__each_task"></ul>
+            </div>
+        </div>
+        <button id="app__toggle_view" title="Toggle view (CTRL + B)"><i class="fas fa-arrow-up app__toggle_icon"></i></button>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

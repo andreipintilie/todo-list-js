@@ -1,0 +1,194 @@
+$background-color: #FAE9CA;
+// $background-color: #b3d9e2;
+$text-color: #333333;
+
+*{
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*:focus{
+    outline: none !important;
+}
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: $background-color;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+#wrapper{
+    // height: 60vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .app__header{
+        // background: red;
+        width: 100% !important;
+        padding: 3em 5em;
+        text-align: center;
+        .app__title{
+            font-size: 96px;
+            user-select: none;
+            color: darken($background-color, 60%);
+            letter-spacing: 5px;
+        }
+    }
+    .app__body{
+        // background: green;
+        padding: 2em 5em;
+        width: 100% !important;
+        text-align: center;
+        #app__input_container{
+            // background: red;
+            position: relative;
+            .fa-plus{
+                position: absolute;
+                top: 1.0em;
+                right: 6.7em;
+                color: darken($background-color, 50%);
+                opacity: 0.5;
+                transition: all 0.2s ease-in-out;
+                user-select: none;
+                pointer-events: none;
+                &::placeholder{
+                    color: darken($background-color, 50%);
+                    opacity: 0.1 !important;
+                    color: lighten($background-color, 7%);
+                }
+            }
+            input[type=text]{
+                width: 80% !important;
+                padding: 10px 12px;
+                border: none;
+                color: darken($background-color, 60%);
+                border-radius: 0px 10px 0px 10px;
+                background: darken($background-color, 3%);
+                border: 1px solid darken($background-color, 7%);
+                box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+                transition: all 0.2s ease-in-out;
+                &:hover{
+                    background: darken($background-color, 5%);
+                    border: 1px solid darken($background-color, 9%);
+                }
+                &:focus{
+                    background: darken($background-color, 7%);
+                    border: 1px solid darken($background-color, 11%);
+                }
+            }
+        }
+    }
+}
+#app__tasks{
+    height: 40vh;
+    background-color: lighten($background-color, 50%);
+    overflow-y: scroll;
+}
+#app__toggle_view{
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    border: none;
+    background-color: lighten($background-color, 50%);
+    z-index: 10;
+    padding: 0.7em 0.9em;
+    border-radius: 50%;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+    color: darken($background-color, 14%);
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        color: darken($background-color, 34%);
+        background:#f0f0f0;
+    }
+    &:active{
+        color: darken($background-color, 54%);
+        background: #dad9d9;
+    }
+}
+// Some classes
+.animation--start{
+    animation: x-movements 0.5s 1;
+}
+.text--color{
+    color: darken($background-color, 60%);
+}
+#app__each_task{
+    list-style-type: none;
+}
+.app__task{
+    // background: #f8f8f8;
+    width: 70%;
+    text-align: left;
+    background-color: #f6f6f6;
+    color: #333333;
+    padding: 1.0em !important;
+    margin-top: 0.9em;
+    margin-left: 0.8em;
+    transition: all 0.2s ease-in-out;
+    margin-top: 2.5em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    &:hover{
+        cursor: pointer;
+        background-color: #ececec;
+    }
+    &:last-child{
+        margin-bottom: 2.5em;
+    }
+    .app__task_content{
+        margin-top: 0.9em;
+        margin-left: 0.8em;
+    }
+}
+.task--done{
+    background: #AAAAAA;
+    opacity: 0.8;
+    cursor: pointer !important;
+    user-select: none;
+    text-decoration: line-through;
+    &:hover{
+        background: #AAAAAA;
+    }
+}
+@keyframes x-movements{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(3em);
+    }
+    50%{
+        transform: translateX(-3em);
+    }
+    75%{
+        transform: translateX(3em);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+// Responsivity
+@media (min-width: 768px) and (max-width: 1200px){
+    .app__body #app__input_container .fa-plus{
+        right: 5.7em !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 991px){
+    .app__body #app__input_container .fa-plus{
+        right: 4.2em !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+    .app__body #app__input_container .fa-plus{
+        right: 3em !important;
+    }
+}
+@media (max-width: 576px){
+    .app__body #app__input_container .fa-plus{
+        right: 2.7em !important;
+    }
+}
