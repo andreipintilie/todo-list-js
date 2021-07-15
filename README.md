@@ -1,4 +1,4 @@
-# To-Do List Web Application with Data-saving
+# Data-saving To-Do List Web Application
 
 ## How to install
 
@@ -58,4 +58,4 @@ const todos = JSON.parse(localStorage.getItem('todos'))
 ![Image 4](https://imagizer.imageshack.com/img924/5616/nlTYz9.png)
 
 ## About
-To-Do List Web Application with Data-saving.
+Data-saving To-Do List Web Application
